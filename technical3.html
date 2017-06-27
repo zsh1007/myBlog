@@ -1,10 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>zsh&lxy个人博客</title>
+    <meta charset="utf-8">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/js.js"></script>
 </head>
 <body>
+<div class="blog-top">
+    <ul class="top-box">
+        <li><a href="#">我的BLOG</a></li>
+        <li><a href="#">技术分享</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+    <div class="top-head">
+        <div class="title-area">
+            <h1 class="site-title" itemprop="headline"><a rel="home">ZSH&LXY个人博客</a></h1>
+            <h3 class="site-description"><span>share your knowledge with us</span></h3>
+        </div>
+    </div>
+</div>
+<div class="middle-box">
+    <div class="page-header">
+        <h1>mui事件封装成angular的指令</h1>
+    </div>
+    <div class="mp20">
+         <pre>
+             //冒泡排序
+var array = [3, 4, 7, 2, 5, 1, 8, 11, 9];
+
+function bubbleSort(array) {
+    var length = array.length;
+    for (var i = length; i > 1; i--) {
+        for (var j = 0; j < i; j++) {
+            if (array[j] > array[j + 1]) {
+                array = swap(array, j, j + 1);
+            }
+        }
+    }
+}
+bubbleSort(array);
+
+function swap(array, v1, v2) {
+    var temp = array[v1];
+    array[v1] = array[v2];
+    array[v2] = temp;
+    return array;
+}
+//  选择排序
+function selectionSort(array) {
+    var min;
+    for (var i = 0; i < array.length - 1; i++) {
+        min = i;
+        for (var j = i + 1; j < array.length; j++) {
+            if (array[j] < array[min]) {
+                min = j;
+            }
+            swap(array, i, min);
+        }
+    }
+}
+selectionSort(array);
+//插入排序
+function insertionSort(array) {
+    var temp, j;
+    for (var i = 1; i < array.length; ++i) {
+        temp = array[i];
+        j = i;
+        while (j > 0 && (array[j - 1] >= temp)) {
+            array[j] = array[j - 1];
+            --j;
+        }
+        array[j] = temp;
+    }
+    console.log(array);
+}
+insertionSort(array);
+         </pre>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="mp20">
+        <nav aria-label="...">
+            <ul class="pager">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="https://zsh1007.github.io/myBlog//technical1.html">1</a></li>
+                <li><a href="https://zsh1007.github.io/myBlog//technical2.html">2</a></li>
+                <li><a class="activity" href="https://zsh1007.github.io/myBlog//technical3.html">3</a></li>
+                <li><a href="https://zsh1007.github.io/myBlog//technical4.html">4</a></li>
+                <li><a href="https://zsh1007.github.io/myBlog//technical5.html">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
 
 </body>
 </html>

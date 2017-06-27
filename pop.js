@@ -18,7 +18,6 @@ function swap(array,v1,v2){
 	array[v2]=temp;
 	return array;
 }
-
 //  选择排序
     function selectionSort(array) {
         var min;

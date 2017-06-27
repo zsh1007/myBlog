@@ -1,10 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>zsh&lxy个人博客</title>
+    <meta charset="utf-8">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/js.js"></script>
 </head>
 <body>
+<div class="blog-top">
+    <ul class="top-box">
+        <li><a href="#">我的BLOG</a></li>
+        <li><a href="#">技术分享</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+    <div class="top-head">
+        <div class="title-area">
+            <h1 class="site-title" itemprop="headline"><a rel="home">ZSH&LXY个人博客</a></h1>
+            <h3 class="site-description"><span>share your knowledge with us</span></h3>
+        </div>
+    </div>
+</div>
+<div class="middle-box">
+    <div class="page-header">
+        <h1>mui事件封装成angular的指令</h1>
+    </div>
+    <div class="mp20">
+        <p>
+            ngModule.directive(&#39;ngTap&#39;, [&#39;$parse&#39;,
+        </p>
+        <p>
+            &nbsp; &nbsp; function($parse) {
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; return {
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; restrict: &#39;A&#39;,
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; compile: function($element, attr) {
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var fn = $parse(attr[&quot;ngTap&quot;]);
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return function ngEventHandler(scope, elem) {
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elem[0].addEventListener(&quot;tap&quot;, function(e) {
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var callback = function(e) {
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fn(scope, {
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $event: e
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; };
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; scope.$apply(callback);
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; };
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+        </p>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; };
+        </p>
+        <p>
+            &nbsp; &nbsp; }
+        </p>
+        <p>
+            ]);
+        </p>
+        <p>
+            <br/>
+        </p>
+        <p>mui+angular中，mui的事件在angular中无法触发脏检查，所以通过angualr的指令将mui的tap等事件封装成指令，将定义的变量绑定到watch队列，使得数据可以双向绑定。</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="mp20">
+        <nav aria-label="...">
+            <ul class="pager">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="https://zsh1007.github.io/myBlog//technical1.html">1</a></li>
+                <li><a class="activity" href="https://zsh1007.github.io/myBlog//technical2.html">2</a></li>
+                <li class="activity"><a href="https://zsh1007.github.io/myBlog//technical3.html">3</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
 
 </body>
 </html>

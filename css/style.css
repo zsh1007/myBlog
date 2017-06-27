@@ -1,7 +1,6 @@
 body{
     height: 100%;
     width: 100%;
-    overflow: auto;
 }
 ul{
     list-style: none;
@@ -48,6 +47,7 @@ a:hover{
 .middle-box{
     margin:0 15px;
     padding: 20px 15px;
+    overflow: auto;
 }
 .right-time{
     border: 1px solid #ccc;
@@ -86,4 +86,58 @@ a:hover{
 }
 .entry-summary img {
     margin-bottom: 24px;
+}
+.list-group-item{
+    padding: 20px 15px;
+    border-left:none;
+    border-right: none;
+}
+.list-group-item:first-child{
+    border-top: none;
+}
+.mt10{
+    margin-bottom: 10px;
+}
+.badge {
+    color:#000;
+    font-weight: 400;
+    padding:5px 15px;
+    background-color:#fff;
+    border:none;
+    border-radius:0px;
+}
+.ml15{
+    margin-left: 15px;
+}
+.box {
+    margin-bottom: 20px;
+    border: 1px solid #EEEEEE;
+    padding: 20px;
+}
+.box .heading {
+    padding: 5px;
+    text-align: center;
+}
+.box .content ul {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+}
+.box .content ul li {
+    border-bottom: 1px solid #E1E1E1;
+    padding: 5px;
+}
+.box .heading h2 {
+    display: inline;
+    padding: 0 10px;
+}
+.content ul li{
+    text-align: left;
+}
+.tp{
+    width:200px;
+    height:auto;
+}
+.activity{
+    background-color: #fd8900;
 }
